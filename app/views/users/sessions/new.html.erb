@@ -1,9 +1,9 @@
-<h2>Sign in</h2>
+<h2>Sign in2</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name),:html => { :multipart => true }) do |f| %>
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
-
+    <%= f.file_field :avatar %>
   <div><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 

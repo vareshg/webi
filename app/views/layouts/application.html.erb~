@@ -55,6 +55,15 @@
                <li><%= link_to "Careers", "careers"  %></li>
               <li><%= link_to "Groups", "groups"  %></li>
               <li><%= link_to "Blog", "blog"  %></li>
+    <li  align="right">          
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or
+    <%= link_to "Sign in", new_user_session_path %>
+  <% end %>
+</lt>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -76,8 +85,14 @@
                  </ul>
           </div><!--/.well -->
         </div><!--/span-->
+
+      <!--  <div>  <p class="notice"><%= notice %></p>
+              <p class="alert"><%= alert %></p>
+        </div>  -->
+        
         <div class="span9">
           <%= bootstrap_flash %>
+
           <%= yield %>
         </div>
       </div><!--/row-->
