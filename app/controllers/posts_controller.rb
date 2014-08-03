@@ -1,8 +1,5 @@
 class PostsController < ApplicationController
-#before_action :authenticate_user!, :except => [:index]
-#before_action :set_listing, only: [:show, :edit, :update, :destroy]
-
-#before_save :current_user
+before_filter :authenticate_user!, :except => [:show, :index]
   # GET /posts
   # GET /posts.json
   def index
@@ -18,10 +15,12 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-
+    @comments = @post.comments
+    @comment=Comment.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
+       format.json { render json: @comments }
     end
   end
 
