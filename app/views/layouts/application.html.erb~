@@ -16,7 +16,11 @@
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
+<<<<<<< HEAD
  <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+=======
+    <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+>>>>>>> 238b4edac73527bfd73123fe70cd4189d7c5bdd9
 
     <!-- For iPhone with high-resolution Retina display: -->
     <!-- Size should be 114 x 114 pixels -->
@@ -49,12 +53,21 @@
           <a class="brand" href="#">Webi</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
+<<<<<<< HEAD
               <li><%= link_to "Home", {:controller=>"home", :action=>"index"}  %></li>
               <li><%= link_to "About_us", {:controller=>"home", :action=>"about_us"} %></li>
               <li><%= link_to "Contat_us", {:controller=>"home", :action=>"contact_us"}  %></li>
                <li><%= link_to "Careers",{:controller=>"home", :action=>"careers"}  %></li>
               <li><%= link_to "Groups", {:controller=>"home", :action=>"groups"}  %></li>
               <li><%= link_to "Blog", {:controller=>"home", :action=>"blog"}  %> </li>
+=======
+              <li><%= link_to "Home", "index"  %></li>
+              <li><%= link_to "About_us", "about_us"  %></li>
+              <li><%= link_to "Contat_us", "contact_us"  %></li>
+               <li><%= link_to "Careers", "careers"  %></li>
+              <li><%= link_to "Groups", "groups"  %></li>
+              <li><%= link_to "Blog", "blog"  %></li>
+>>>>>>> 238b4edac73527bfd73123fe70cd4189d7c5bdd9
     <li  align="right">          
   <% if user_signed_in? %>
     Signed in as <%= current_user.email %>. Not you?
@@ -76,12 +89,22 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
+<<<<<<< HEAD
              <li><%= link_to "Home", {:controller=>"home", :action=>"index"}  %></li>
               <li><%= link_to "About_us", {:controller=>"home", :action=>"about_us"} %></li>
               <li><%= link_to "Contat_us", {:controller=>"home", :action=>"contact_us"}  %></li>
                <li><%= link_to "Careers",{:controller=>"home", :action=>"careers"}  %></li>
               <li><%= link_to "Groups", {:controller=>"home", :action=>"groups"}  %></li>
               <li><%= link_to "Blog", {:controller=>"home", :action=>"blog"}  %></li></ul>
+=======
+              <li><%= link_to "Home", "index"  %></li>
+              <li><%= link_to "About_us", "about_us"  %></li>
+              <li><%= link_to "Contat_us", "contact_us"  %></li>
+               <li><%= link_to "Careers", "careers"  %></li>
+              <li><%= link_to "Groups", "groups"  %></li>
+              <li><%= link_to "Blog", "blog"  %></li>
+                 </ul>
+>>>>>>> 238b4edac73527bfd73123fe70cd4189d7c5bdd9
           </div><!--/.well -->
         </div><!--/span-->
 

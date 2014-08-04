@@ -1,4 +1,13 @@
 Webi::Application.routes.draw do
+<<<<<<< HEAD
+  resources :comments
+
+
+  resources :posts
+
+
+=======
+>>>>>>> 238b4edac73527bfd73123fe70cd4189d7c5bdd9
   devise_for :users
 
   root to: "home#index"
@@ -13,7 +22,10 @@ Webi::Application.routes.draw do
   get "home/groups"
 
   get "home/blog"
+<<<<<<< HEAD
   #match "blog"  => "home#blog" :as => get
+=======
+>>>>>>> 238b4edac73527bfd73123fe70cd4189d7c5bdd9
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -70,5 +82,9 @@ Webi::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
+<<<<<<< HEAD
    match ':controller(/:action(/:id))(.:format)'
+=======
+  # match ':controller(/:action(/:id))(.:format)'
+>>>>>>> 238b4edac73527bfd73123fe70cd4189d7c5bdd9
 end
